@@ -1,0 +1,24 @@
+# NBA Draft Decision-Support Engine — Python dependencies
+# Install:  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+
+# Data acquisition
+nba_api>=1.4                       # NBA Stats API (combine anthro + drills)
+basketball_reference_web_scraper>=4.10  # NBA season data where it fits
+requests>=2.31
+beautifulsoup4>=4.12               # un-comment BBRef tables, parse CBB pages
+lxml>=5.0
+html5lib>=1.1
+
+# Join / cleaning
+rapidfuzz>=3.6                     # fuzzy name matching (college <-> NBA)
+unidecode>=1.3                     # accent normalization
+tenacity>=8.2                      # retry/backoff for throttled fetches
+
+# Modeling
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+
+# Config / tests
+pyyaml>=6.0
+pytest>=8.0
